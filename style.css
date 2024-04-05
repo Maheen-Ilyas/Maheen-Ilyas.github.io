@@ -130,18 +130,6 @@ a:hover {
   max-height: 300px;
 }
 
-/* RESPONSIVE VIEW */
-
-@media screen and (max-width: 600px) {
-  #desktop {
-    display: none;
-  }
-
-  #mobile {
-    display: flex;
-  }
-}
-
 /* SECTIONS */
 
 section {
@@ -161,10 +149,11 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  margin-bottom: 12%;
+  margin-bottom: 14%;
 }
 
 .home-image {
+  padding-top: 20px;
   height: 300px;
   width: 300px;
   border-radius: 0px 150px / 130px;
@@ -202,13 +191,14 @@ section {
 }
 
 .button-resume,
-.button-contact {
+.button-contact-project {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   padding: 0.6rem;
   width: 100px;
+  height: 40px;
   border-radius: 50px;
   font-family: "Playfair Display", "serif";
   font-size: 1rem;
@@ -224,12 +214,12 @@ section {
   background-color: grey;
 }
 
-.button-contact {
+.button-contact-project {
   background-color: black;
   color: white;
 }
 
-.button-contact:hover {
+.button-contact-project:hover {
   background-color: rgba(22, 21, 21, 0.8);
 }
 
@@ -256,17 +246,17 @@ section {
 
 #about {
   position: relative;
+  margin-bottom: 10%;
 }
 
 .about-h1 {
   font-family: "Playfair Display", "serif";
-  padding-bottom: 4px;
   font-size: xx-large;
   text-align: center;
 }
 
 .about-text {
-  padding-top: 4px;
+  margin: 1.5rem auto;
   align-self: center;
   text-align: start;
   align-items: center;
@@ -276,6 +266,7 @@ section {
   font-family: "Lato", "sans-serif";
   padding-bottom: 1rem;
   line-height: 1.5rem;
+  font-size: 1rem;
 }
 
 .icons-grid {
@@ -354,3 +345,217 @@ section {
 }
 
 /* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+  /* margin-bottom: 20%; */
+}
+
+.projects-h1 {
+  font-family: "Playfair Display", "serif";
+  font-size: xx-large;
+  text-align: center;
+}
+
+.projects-container {
+  margin: 1.5rem auto;
+  max-width: calc(100%-80px);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.article-card {
+  background: white;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.article-card:hover {
+  box-shadow: 0 4px 20px 0 rgba(90, 90, 90, 0.5);
+}
+
+.image {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50px 50px 0 0;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.language {
+  display: block;
+  font-family: "Lato", "sans-serif";
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #5a5a5a;
+}
+
+.project-h3 {
+  margin: 0.5rem 0;
+  font-family: "Playfair Display", "serif";
+}
+
+.project-p {
+  margin-bottom: 0.5rem;
+  font-family: "Lato", "sans-serif";
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+  color: #5a5a5a;
+}
+
+.project-content .button-contact-project {
+  align-self: center;
+}
+
+/* CONTACT SECTION */
+
+#contact {
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.contact-h1 {
+  padding-bottom: 0.5rem;
+  font-family: "Playfair Display", "serif";
+  font-size: xx-large;
+  text-align: center;
+}
+
+.contact-container {
+  padding: 10px;
+  margin: 2rem 2rem 1.5rem 0;
+  max-width: 200%;
+  height: 300px;
+  border-radius: 50px;
+}
+
+label {
+  padding: 2px;
+  font-family: "Playfair Display", "serif";
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  width: 400px;
+  margin-bottom: 1.5ch;
+  background: local;
+  border: 1px solid #5a5a5a;
+  border-radius: 10px;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid black;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+.name-box,
+.email-box,
+.message-box {
+  display: flex;
+  flex-direction: column;
+}
+
+#name,
+#email,
+#message {
+  font-family: "Lato", "sans-serif";
+  font-size: 0.9rem;
+  color: #5a5a5a;
+}
+
+#name,
+#email {
+  padding: 5px;
+  height: 1.5rem;
+}
+
+#message {
+  padding: 5px;
+  height: 6rem;
+}
+
+.contact-text {
+  margin-top: 2rem;
+}
+
+.contact-h2 {
+  margin-bottom: 0.5rem;
+  font-family: "Playfair Display", "serif";
+}
+
+.contact-p {
+  padding-bottom: 1rem;
+  font-family: "Lato", "sans-serif";
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  margin: 0 1rem;
+  height: 50px;
+}
+
+.footer-p {
+  text-align: center;
+  font-family: "Lato", "sans-serif";
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* RESPONSIVE VIEW */
+
+@media screen and (max-width: 700px) {
+  #desktop {
+    display: none;
+  }
+
+  #mobile {
+    display: flex;
+  }
+
+  #home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .projects-container {
+    max-width: 400px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  #contact .section-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
