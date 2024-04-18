@@ -37,7 +37,15 @@ function sendEmail() {
     From: "mahilyas05@gmail.com",
     Subject: subject,
     Body: body,
-  }).then((message) => alert(message));
+  }).then((message) => {
+    if (message == "OK") {
+      Swal.fire({
+        title: "Success",
+        text: "Message sent successfully!",
+        icon: "Ok",
+      });
+    }
+  });
 }
 
 form.addEventListener("submit", (e) => {
