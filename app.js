@@ -21,3 +21,22 @@ function toggleMenu() {
   menuItems.classList.toggle("open");
   menuIcon.classList.toggle("open");
 }
+
+const form = document.querySelector("form");
+function sendEmail() {
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "mahilyas05@gmail.com",
+    Password: "BE368C81C48BCBFABD92F9D7966F6847182F",
+    To: "mahilyas05@gmail.com",
+    From: "mahilyas05@gmail.com",
+    Subject: "This is the subject",
+    Body: "And this is the body",
+  }).then((message) => alert(message));
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  sendEmail();
+});
