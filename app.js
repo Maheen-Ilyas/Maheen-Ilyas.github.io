@@ -23,15 +23,20 @@ function toggleMenu() {
 }
 
 const form = document.querySelector("form");
+const senderName = document.getElementById("name");
+const senderMessage = document.getElementById("message");
 function sendEmail() {
+  const subject = `${senderName.value}`;
+  const body = `${senderMessage.value}`;
+
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "mahilyas05@gmail.com",
     Password: "BE368C81C48BCBFABD92F9D7966F6847182F",
     To: "mahilyas05@gmail.com",
     From: "mahilyas05@gmail.com",
-    Subject: "This is the subject",
-    Body: "And this is the body",
+    Subject: subject,
+    Body: body,
   }).then((message) => alert(message));
 }
 
