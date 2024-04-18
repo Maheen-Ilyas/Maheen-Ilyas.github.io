@@ -22,34 +22,3 @@ function toggleMenu() {
   menuIcon.classList.toggle("open");
 }
 
-const form = document.querySelector("form");
-const senderName = document.getElementById("name");
-const senderMessage = document.getElementById("message");
-const senderEmail = document.getElementById("email");
-function sendEmail() {
-  const subject = `${senderName.value}`;
-  const body = `${senderMessage.value}`;
-  const email = `${senderEmail.value}`;
-
-  Email.send({
-    SecureToken: "86262095-4b3b-459d-81b7-9f5d4ec0a829",
-    To: "mahilyas05@gmail.com",
-    From: email,
-    Subject: subject,
-    Body: body,
-  }).then((message) => {
-    if (message == "OK") {
-      Swal.fire({
-        title: "Success",
-        text: "Message sent successfully!",
-        icon: "Ok",
-      });
-    }
-  });
-}
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  sendEmail();
-});
