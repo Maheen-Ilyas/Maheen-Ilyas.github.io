@@ -29,13 +29,12 @@ const senderEmail = document.getElementById("email");
 function sendEmail() {
   const subject = `${senderName.value}`;
   const body = `${senderMessage.value}`;
+  const email = `${senderEmail.value}`;
 
   Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "mahilyas05@gmail.com",
-    Password: "BE368C81C48BCBFABD92F9D7966F6847182F",
+    SecureToken: "86262095-4b3b-459d-81b7-9f5d4ec0a829",
     To: "mahilyas05@gmail.com",
-    From: senderEmail,
+    From: email,
     Subject: subject,
     Body: body,
   }).then((message) => {
